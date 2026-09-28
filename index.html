@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AbiPlant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PANTALLA DE CARGA -->
+    <div class="pantalla-carga">
+
+        <div class="carga-contenido">
+
+            <div class="carga-hoja">🌿</div>
+
+            <h2>AbiPlant</h2>
+
+            <p>Preparando tu pequeño jardín...</p>
+
+            <div class="barra">
+                <div class="progreso"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PORTADA -->
+    <section class="pantalla portada activa" id="portada">
+
+        <h1>AbiPlant</h1>
+
+        <p>Un pequeño espacio dedicado a las plantas.</p>
+
+        <button class="boton" onclick="mostrarPantalla('dedicatoria')">
+            Entrar
+        </button>
+
+    </section>
+
+
+    <!-- DEDICATORIA -->
+    <section class="pantalla dedicatoria" id="dedicatoria">
+
+        <div class="tarjeta">
+
+            <div class="flor">🌿</div>
+
+            <h2>Para Abi</h2>
+
+            <div class="linea"></div>
+
+            <p>
+                Hice este pequeño espacio pensando en ti.
+            </p>
+
+            <p>
+                Así como una planta necesita tiempo, cuidado y cariño
+                para crecer, hay personas que hacen que nuestros días
+                también florezcan.
+            </p>
+
+            <p>
+                Esta página es un pequeño detalle para ti.
+            </p>
+
+            <div class="botones-navegacion">
+
+                <button class="boton" onclick="mostrarPantalla('portada')">
+                    Volver
+                </button>
+
+                <button class="boton" onclick="mostrarPantalla('plantas')">
+                    Continuar
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PLANTAS -->
+    <section class="pantalla plantas" id="plantas">
+
+        <div class="plantas-contenido">
+
+            <h2>Nuestras plantas</h2>
+
+            <p class="intro-plantas">
+                Estas son 3 de las plantas favoritas de Abi.
+                Cada una es diferente, pero todas tienen algo especial
+                que las hace únicas.
+            </p>
+
+
+            <div class="lista-plantas">
+
+                <button class="planta-boton" onclick="mostrarPantalla('peperomia')">
+
+                    <span class="planta-numero">01</span>
+
+                    <span class="planta-nombre">
+                        Peperomia cadena de tortuga
+                    </span>
+
+                    <span class="planta-flecha">→</span>
+
+                </button>
+
+
+                <button class="planta-boton" onclick="mostrarPantalla('hibisco')">
+
+                    <span class="planta-numero">02</span>
+
+                    <span class="planta-nombre">
+                        Hibiscos
+                    </span>
+
+                    <span class="planta-flecha">→</span>
+
+                </button>
+
+
+                <button class="planta-boton" onclick="mostrarPantalla('oxalis')">
+
+                    <span class="planta-numero">03</span>
+
+                    <span class="planta-nombre">
+                        Oxalis
+                    </span>
+
+                    <span class="planta-flecha">→</span>
+
+                </button>
+
+            </div>
+
+
+            <div class="volver-plantas">
+
+                <button class="boton" onclick="mostrarPantalla('dedicatoria')">
+                    ← Volver a la dedicatoria
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PEPEROMIA -->
+    <section class="pantalla plantas planta-detalle" id="peperomia">
+
+        <div class="detalle-planta">
+
+            <div class="foto-planta">
+
+                <img id="foto-peperomia"
+                     src="imagenes/peperomia/foto1.jpg"
+                     alt="Peperomia cadena de tortuga">
+
+                <button class="flecha-foto izquierda"
+                        onclick="cambiarFoto('peperomia', -1)">
+                    ‹
+                </button>
+
+                <button class="flecha-foto derecha"
+                        onclick="cambiarFoto('peperomia', 1)">
+                    ›
+                </button>
+
+            </div>
+
+
+            <div class="informacion-planta">
+
+                <span class="numero-planta">01</span>
+
+                <h2>Peperomia cadena de tortuga</h2>
+
+                <div class="linea"></div>
+
+                <p>
+                    <strong>Nombre científico:</strong>
+                    Peperomia prostrata
+                </p>
+
+                <p>
+                    <strong>Familia:</strong>
+                    Piperaceae
+                </p>
+
+                <p>
+                    <strong>Origen:</strong>
+                    Regiones tropicales de América del Sur.
+                </p>
+
+                <p>
+                    La Peperomia cadena de tortuga es una planta pequeña y
+                    rastrera conocida por sus hojas redondeadas, carnosas y
+                    decoradas con patrones que recuerdan al caparazón de una
+                    tortuga.
+                </p>
+
+                <p>
+                    <strong>Luz:</strong>
+                    Prefiere luz brillante indirecta.
+                </p>
+
+                <p>
+                    <strong>Riego:</strong>
+                    Necesita poco riego. Es recomendable dejar que el
+                    sustrato se seque parcialmente antes de volver a regar.
+                </p>
+
+                <p>
+                    <strong>Humedad:</strong>
+                    Disfruta de ambientes con humedad moderada.
+                </p>
+
+                <p>
+                    <strong>Temperatura:</strong>
+                    Prefiere temperaturas cálidas y no tolera bien el frío
+                    intenso.
+                </p>
+
+                <p>
+                    <strong>Sustrato:</strong>
+                    Debe tener buen drenaje para evitar que las raíces
+                    permanezcan demasiado tiempo húmedas.
+                </p>
+
+                <p>
+                    <strong>Propagación:</strong>
+                    Puede reproducirse mediante esquejes de tallo u hojas.
+                </p>
+
+                <p>
+                    <strong>Dato interesante:</strong>
+                    Sus hojas recuerdan a pequeños caparazones de tortuga,
+                    de ahí uno de sus nombres comunes.
+                </p>
+
+                <button class="boton" onclick="mostrarPantalla('plantas')">
+                    ← Volver a las plantas
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- HIBISCO -->
+    <section class="pantalla plantas planta-detalle" id="hibisco">
+
+        <div class="detalle-planta">
+
+            <div class="foto-planta">
+
+                <img id="foto-hibisco"
+                     src="imagenes/hibisco/foto4.jpg"
+                     alt="Hibisco">
+
+                <button class="flecha-foto izquierda"
+                        onclick="cambiarFoto('hibisco', -1)">
+                    ‹
+                </button>
+
+                <button class="flecha-foto derecha"
+                        onclick="cambiarFoto('hibisco', 1)">
+                    ›
+                </button>
+
+            </div>
+
+
+            <div class="informacion-planta">
+
+                <span class="numero-planta">02</span>
+
+                <h2>Hibiscos</h2>
+
+                <div class="linea"></div>
+
+                <p>
+                    <strong>Nombre científico de referencia:</strong>
+                    Hibiscus rosa-sinensis
+                </p>
+
+                <p>
+                    <strong>Familia:</strong>
+                    Malvaceae
+                </p>
+
+                <p>
+                    <strong>Origen:</strong>
+                    Regiones tropicales y subtropicales de Asia.
+                </p>
+
+                <p>
+                    El hibisco es un arbusto conocido por sus flores grandes,
+                    llamativas y de colores variados. Es una planta muy
+                    apreciada tanto por sus flores como por su follaje.
+                </p>
+
+                <p>
+                    <strong>Luz:</strong>
+                    Necesita bastante luz y puede recibir varias horas de sol.
+                </p>
+
+                <p>
+                    <strong>Riego:</strong>
+                    Requiere riego regular, especialmente durante las épocas
+                    cálidas. El exceso de agua debe evitarse.
+                </p>
+
+                <p>
+                    <strong>Humedad:</strong>
+                    Prefiere ambientes con humedad moderada a alta.
+                </p>
+
+                <p>
+                    <strong>Temperatura:</strong>
+                    Se desarrolla mejor en temperaturas cálidas.
+                </p>
+
+                <p>
+                    <strong>Suelo:</strong>
+                    Necesita un sustrato fértil, aireado y con buen drenaje.
+                </p>
+
+                <p>
+                    <strong>Floración:</strong>
+                    Con suficiente luz, agua y nutrientes puede producir
+                    flores de manera abundante durante las temporadas
+                    favorables.
+                </p>
+
+                <p>
+                    <strong>Poda:</strong>
+                    Una poda adecuada puede ayudar a mantener la forma de la
+                    planta y estimular nuevos brotes.
+                </p>
+
+                <p>
+                    <strong>Propagación:</strong>
+                    Puede propagarse principalmente mediante esquejes.
+                </p>
+
+                <p>
+                    <strong>Dato interesante:</strong>
+                    Sus flores pueden presentar una gran variedad de colores
+                    y formas dependiendo de la variedad.
+                </p>
+
+                <button class="boton" onclick="mostrarPantalla('plantas')">
+                    ← Volver a las plantas
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- OXALIS -->
+    <section class="pantalla plantas planta-detalle" id="oxalis">
+
+        <div class="detalle-planta">
+
+            <div class="foto-planta">
+
+                <img id="foto-oxalis"
+                     src="imagenes/oxalis/foto7.jpg"
+                     alt="Oxalis">
+
+                <button class="flecha-foto izquierda"
+                        onclick="cambiarFoto('oxalis', -1)">
+                    ‹
+                </button>
+
+                <button class="flecha-foto derecha"
+                        onclick="cambiarFoto('oxalis', 1)">
+                    ›
+                </button>
+
+            </div>
+
+
+            <div class="informacion-planta">
+
+                <span class="numero-planta">03</span>
+
+                <h2>Oxalis</h2>
+
+                <div class="linea"></div>
+
+                <p>
+                    <strong>Nombre científico de referencia:</strong>
+                    Oxalis triangularis
+                </p>
+
+                <p>
+                    <strong>Familia:</strong>
+                    Oxalidaceae
+                </p>
+
+                <p>
+                    <strong>Origen:</strong>
+                    Regiones de América del Sur.
+                </p>
+
+                <p>
+                    La Oxalis triangularis es una planta reconocida por sus
+                    características hojas triangulares, que suelen presentar
+                    tonalidades moradas o púrpuras.
+                </p>
+
+                <p>
+                    <strong>Luz:</strong>
+                    Prefiere luz brillante indirecta.
+                </p>
+
+                <p>
+                    <strong>Riego:</strong>
+                    El sustrato debe mantenerse ligeramente húmedo,
+                    evitando que permanezca completamente empapado.
+                </p>
+
+                <p>
+                    <strong>Humedad:</strong>
+                    Prefiere una humedad moderada.
+                </p>
+
+                <p>
+                    <strong>Temperatura:</strong>
+                    Se desarrolla mejor en temperaturas suaves y cálidas.
+                </p>
+
+                <p>
+                    <strong>Suelo:</strong>
+                    Necesita un sustrato ligero y con buen drenaje.
+                </p>
+
+                <p>
+                    <strong>Propagación:</strong>
+                    Puede reproducirse principalmente mediante sus pequeños
+                    bulbos o estructuras subterráneas.
+                </p>
+
+                <p>
+                    <strong>Periodo de reposo:</strong>
+                    En determinadas condiciones puede entrar en un periodo
+                    de dormancia, durante el cual pierde parte de sus hojas
+                    y reduce su crecimiento.
+                </p>
+
+                <p>
+                    <strong>Dato interesante:</strong>
+                    Sus hojas pueden abrirse durante el día y cerrarse cuando
+                    llega la noche, creando un movimiento natural muy
+                    característico.
+                </p>
+
+                <button class="boton" onclick="mostrarPantalla('plantas')">
+                    ← Volver a las plantas
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALERÍA -->
+    <section class="pantalla galeria" id="galeria">
+
+        <h2>Galería</h2>
+
+        <p>
+            Aquí podremos colocar fotografías más adelante.
+        </p>
+
+        <button class="boton" onclick="mostrarPantalla('plantas')">
+            ← Volver a las plantas
+        </button>
+
+        <button class="boton" onclick="mostrarPantalla('especial')">
+            Continuar
+        </button>
+
+    </section>
+
+
+    <!-- SECCIÓN ESPECIAL -->
+    <section class="pantalla especial" id="especial">
+
+        <h2>Un lugar especial</h2>
+
+        <p>
+            Esta sección la construiremos juntos.
+        </p>
+
+        <button class="boton" onclick="mostrarPantalla('galeria')">
+            ← Volver a la galería
+        </button>
+
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

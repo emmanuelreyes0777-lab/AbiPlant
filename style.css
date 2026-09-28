@@ -1,0 +1,664 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: Georgia, serif;
+    color: #49634D;
+    background-color: #FAFAF7;
+}
+
+
+/* =========================
+   SISTEMA DE PANTALLAS
+   ========================= */
+
+.pantalla {
+    display: none;
+    width: 100%;
+    height: 100vh;
+}
+
+.pantalla.activa {
+    display: flex;
+}
+
+
+/* =========================
+   PORTADA
+   ========================= */
+
+.portada {
+    width: 100%;
+    height: 100vh;
+    background-color: #AFC9D8;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+.portada h1 {
+    font-size: 80px;
+    font-weight: normal;
+    margin: 0;
+    color: #49634D;
+}
+
+.portada p {
+    font-size: 21px;
+    margin: 15px 0 35px;
+}
+
+
+/* =========================
+   BOTONES
+   ========================= */
+
+.boton {
+    color: #49634D;
+    background-color: #E8D99B;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-family: Georgia, serif;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.boton:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(73, 99, 77, 0.15);
+}
+
+
+/* =========================
+   DEDICATORIA
+   ========================= */
+
+.dedicatoria {
+    width: 100%;
+    height: 100vh;
+
+    background-color: #A8C3A0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 25px;
+}
+
+.tarjeta {
+    width: 90%;
+    max-width: 650px;
+
+    background-color: #FAFAF7;
+
+    padding: 60px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(73, 99, 77, 0.15);
+}
+
+.flor {
+    font-size: 40px;
+}
+
+.tarjeta h2 {
+    font-size: 48px;
+
+    font-weight: normal;
+
+    margin: 15px 0;
+
+    color: #49634D;
+}
+
+.linea {
+    width: 70px;
+    height: 2px;
+
+    background-color: #E8D99B;
+
+    margin: 25px auto;
+}
+
+.tarjeta p {
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    margin: 20px 0;
+}
+
+
+/* =========================
+   BOTONES DE NAVEGACIÓN
+   ========================= */
+
+.botones-navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+
+/* =========================
+   PLANTAS
+   ========================= */
+
+.plantas {
+    width: 100%;
+    height: 100vh;
+
+    background-color: #FAFAF7;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.plantas-contenido {
+    width: 90%;
+    max-width: 850px;
+}
+
+.plantas h2 {
+    font-size: 42px;
+
+    font-weight: normal;
+
+    margin: 0 0 15px;
+}
+
+.intro-plantas {
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   LISTA DE PLANTAS
+   ========================= */
+
+.lista-plantas {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.planta-boton {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr 50px;
+
+    align-items: center;
+
+    text-align: left;
+
+    padding: 20px 25px;
+
+    background-color: #A8C3A0;
+
+    border: none;
+
+    border-radius: 18px;
+
+    color: #49634D;
+
+    font-family: Georgia, serif;
+
+    cursor: pointer;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.planta-boton:hover {
+    transform: translateX(8px);
+
+    box-shadow: 0 8px 20px rgba(73, 99, 77, 0.15);
+}
+
+.planta-numero {
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+.planta-nombre {
+    font-size: 21px;
+}
+
+.planta-flecha {
+    font-size: 28px;
+    text-align: right;
+}
+
+
+/* =========================
+   BOTÓN VOLVER DE PLANTAS
+   ========================= */
+
+.volver-plantas {
+    margin-top: 35px;
+}
+
+
+/* =========================
+   DETALLE DE CADA PLANTA
+   ========================= */
+
+.planta-detalle {
+    background-color: #FAFAF7;
+
+    padding: 35px;
+}
+
+.detalle-planta {
+    width: 95%;
+    max-width: 1200px;
+
+    height: 90vh;
+
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    background-color: #FFFFFF;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(73, 99, 77, 0.12);
+}
+
+
+/* =========================
+   ESPACIO PARA FOTOS
+   ========================= */
+
+.foto-planta {
+    position: relative;
+
+    background-color: #AFC9D8;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.foto-placeholder {
+    width: 80%;
+    height: 75%;
+
+    border: 2px dashed rgba(73, 99, 77, 0.35);
+
+    border-radius: 20px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   FLECHAS DE FOTOS
+   ========================= */
+
+.flecha-foto {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: rgba(250, 250, 247, 0.85);
+
+    color: #49634D;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.flecha-foto:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.flecha-foto.izquierda {
+    left: 20px;
+}
+
+.flecha-foto.derecha {
+    right: 20px;
+}
+
+
+/* =========================
+   INFORMACIÓN DE LA PLANTA
+   ========================= */
+
+.informacion-planta {
+    padding: 45px;
+
+    overflow-y: auto;
+
+    text-align: left;
+}
+
+.numero-planta {
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.6;
+}
+
+.informacion-planta h2 {
+    font-size: 38px;
+
+    font-weight: normal;
+
+    margin: 10px 0;
+}
+
+.informacion-planta .linea {
+    margin: 20px 0;
+}
+
+.informacion-planta p {
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    margin: 15px 0;
+}
+
+.informacion-planta .boton {
+    margin-top: 20px;
+}
+
+
+/* =========================
+   GALERÍA
+   ========================= */
+
+.galeria {
+    width: 100%;
+    height: 100vh;
+
+    background-color: #AFC9D8;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.galeria h2 {
+    font-size: 38px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.galeria p {
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ESPECIAL
+   ========================= */
+
+.especial {
+    width: 100%;
+    height: 100vh;
+
+    background-color: #E8D99B;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.especial h2 {
+    font-size: 38px;
+    font-weight: normal;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+   ========================= */
+
+footer {
+    display: none;
+}
+
+
+/* =========================
+   PANTALLA DE CARGA
+   ========================= */
+
+.pantalla-carga {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #FAFAF7;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    z-index: 9999;
+
+    animation: desaparecer 1s ease 3s forwards;
+
+    pointer-events: none;
+}
+
+.carga-contenido {
+    width: 100%;
+    max-width: 400px;
+
+    text-align: center;
+
+    animation: aparecer 1.2s ease;
+}
+
+.carga-hoja {
+    font-size: 55px;
+
+    display: block;
+
+    animation: respirar 2s infinite ease-in-out;
+}
+
+.carga-contenido h2 {
+    font-size: 42px;
+
+    font-weight: normal;
+
+    color: #49634D;
+
+    margin: 15px 0 5px;
+}
+
+.carga-contenido p {
+    color: #6d7e70;
+
+    font-size: 16px;
+
+    margin: 0;
+}
+
+
+/* =========================
+   BARRA DE CARGA
+   ========================= */
+
+.barra {
+    width: 220px;
+    height: 4px;
+
+    background-color: #AFC9D8;
+
+    border-radius: 10px;
+
+    margin: 25px auto;
+}
+
+.progreso {
+    height: 100%;
+    width: 0%;
+
+    background-color: #A8C3A0;
+
+    border-radius: 10px;
+
+    animation: cargar 3s ease forwards;
+}
+
+
+/* =========================
+   ANIMACIONES
+   ========================= */
+
+@keyframes cargar {
+
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+
+@keyframes respirar {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes desaparecer {
+
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}
