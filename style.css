@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
 }
@@ -550,12 +549,6 @@ body {
     align-items: center;
 }
 
-.especial h2 {
-    font-size: 38px;
-
-    font-weight: normal;
-}
-
 
 /* =========================
    PIE DE PÁGINA
@@ -851,7 +844,17 @@ footer {
     }
 
     .volver-plantas {
-        margin-top: 25px;
+        margin-top: 30px;
+
+        margin-bottom: 40px;
+    }
+
+    .plantas:not(.planta-detalle) {
+        overflow-y: auto;
+
+        justify-content: flex-start;
+
+        padding-bottom: 40px;
     }
 
 
@@ -1066,4 +1069,3 @@ footer {
     }
 
 }
-
