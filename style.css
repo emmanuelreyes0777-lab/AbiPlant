@@ -1,31 +1,39 @@
+/* ==============================
+   CONFIGURACIÓN GENERAL
+   ============================== */
+
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html,
 body {
     width: 100%;
     height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Georgia, serif;
-    color: #49634D;
-    background-color: #FAFAF7;
+    background: #f8f8f2;
+    color: #30483a;
+    overflow: hidden;
 }
 
 
-/* =========================
-   SISTEMA DE PANTALLAS
-   ========================= */
+/* ==============================
+   PANTALLAS
+   ============================== */
 
 .pantalla {
-    display: none;
     width: 100%;
     height: 100vh;
+    min-height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .pantalla.activa {
@@ -33,390 +41,389 @@ body {
 }
 
 
-/* =========================
-   PORTADA
-   ========================= */
+/* ==============================
+   PANTALLA DE CARGA
+   ============================== */
 
-.portada {
-    width: 100%;
-    height: 100vh;
-
-    background-color: #AFC9D8;
+.pantalla-carga {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
 
     display: flex;
-    flex-direction: column;
-
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
+    background: #f5f5e9;
+}
+
+.carga-contenido {
     text-align: center;
+}
 
-    padding: 30px;
+.carga-icono {
+    font-size: 55px;
+    margin-bottom: 15px;
+    animation: aparecer 1.5s ease-in-out infinite alternate;
+}
+
+.carga-contenido h2 {
+    font-size: 30px;
+    color: #496b4d;
+    margin-bottom: 10px;
+}
+
+.carga-contenido p {
+    font-size: 15px;
+    color: #6f806f;
+}
+
+@keyframes aparecer {
+    from {
+        transform: scale(0.9);
+        opacity: 0.6;
+    }
+
+    to {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+
+/* ==============================
+   PORTADA
+   ============================== */
+
+.portada {
+    background:
+        linear-gradient(
+            rgba(240, 239, 218, 0.88),
+            rgba(222, 235, 224, 0.92)
+        );
+}
+
+.portada-contenido {
+    text-align: center;
+    width: 90%;
+    max-width: 700px;
 }
 
 .portada h1 {
-    font-size: 80px;
-    font-weight: normal;
-
-    margin: 0;
-
-    color: #49634D;
+    font-size: 70px;
+    color: #496b4d;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
 }
 
 .portada p {
     font-size: 21px;
-
-    margin: 15px 0 35px;
+    color: #647565;
+    margin-bottom: 35px;
 }
 
 
-/* =========================
+/* ==============================
    BOTONES
-   ========================= */
+   ============================== */
 
 .boton {
-    color: #49634D;
+    border: none;
+    background: #6f9274;
+    color: white;
 
-    background-color: #E8D99B;
+    padding: 14px 30px;
 
-    padding: 14px 25px;
-
-    border-radius: 30px;
+    border-radius: 12px;
 
     font-size: 17px;
-
-    border: none;
-
     cursor: pointer;
 
-    font-family: Georgia, serif;
-
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: 0.2s;
 }
 
 .boton:hover {
-    transform: translateY(-4px);
+    background: #58795d;
+    transform: translateY(-2px);
+}
 
-    box-shadow: 0 8px 20px rgba(73, 99, 77, 0.15);
+.boton.secundario {
+    background: #8ba3b0;
+}
+
+.boton.secundario:hover {
+    background: #718b99;
 }
 
 
-/* =========================
+/* ==============================
    DEDICATORIA
-   ========================= */
+   ============================== */
 
 .dedicatoria {
-    width: 100%;
-    height: 100vh;
-
-    background-color: #A8C3A0;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    padding: 50px 25px;
+    background: #f4f1dc;
 }
 
 .tarjeta {
     width: 90%;
-    max-width: 650px;
+    max-width: 700px;
 
-    background-color: #FAFAF7;
+    background: rgba(255, 255, 255, 0.85);
 
-    padding: 60px;
-
-    text-align: center;
+    padding: 50px;
 
     border-radius: 25px;
 
-    box-shadow: 0 15px 40px rgba(73, 99, 77, 0.15);
+    text-align: center;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
 }
 
-.flor {
-    font-size: 40px;
-}
-
-.tarjeta h2 {
-    font-size: 48px;
-
-    font-weight: normal;
-
-    margin: 15px 0;
-
-    color: #49634D;
-}
-
-.linea {
-    width: 70px;
-    height: 2px;
-
-    background-color: #E8D99B;
-
-    margin: 25px auto;
+.tarjeta h1 {
+    color: #496b4d;
+    font-size: 45px;
+    margin-bottom: 25px;
 }
 
 .tarjeta p {
-    font-size: 19px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #536354;
+    margin-bottom: 18px;
+}
 
-    line-height: 1.8;
-
-    margin: 20px 0;
+.tarjeta .boton {
+    margin-top: 15px;
+    margin-right: 8px;
 }
 
 
-/* =========================
-   BOTONES DE NAVEGACIÓN
-   ========================= */
-
-.botones-navegacion {
-    display: flex;
-
-    justify-content: center;
-
-    gap: 15px;
-
-    margin-top: 30px;
-}
-
-
-/* =========================
-   PLANTAS
-   ========================= */
+/* ==============================
+   LISTAS DE PLANTAS
+   ============================== */
 
 .plantas {
-    width: 100%;
-    height: 100vh;
+    background: #eef3e7;
 
-    background-color: #F4F7F2;
+    align-items: flex-start;
+    justify-content: flex-start;
 
-    padding: 50px 30px;
-
-    text-align: center;
-
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* =========================
-   DESPLAZAMIENTO EN LISTAS
-   ========================= */
-
-.plantas:not(.planta-detalle) {
     overflow-y: auto;
 
-    justify-content: flex-start;
+    padding: 50px 20px;
 }
-
 
 .plantas-contenido {
     width: 90%;
     max-width: 850px;
 
+    margin: 0 auto;
+
     flex-shrink: 0;
 }
 
-.plantas h2 {
+.plantas h1 {
+    text-align: center;
+
     font-size: 42px;
 
-    font-weight: normal;
+    color: #496b4d;
 
-    margin: 0 0 15px;
+    margin-bottom: 12px;
 }
 
 .intro-plantas {
-    max-width: 700px;
-
-    margin: 0 auto 35px;
+    text-align: center;
 
     font-size: 18px;
 
-    line-height: 1.6;
+    color: #68766a;
+
+    margin-bottom: 30px;
 }
 
 
-/* =========================
-   LISTA DE PLANTAS
-   ========================= */
+/* ==============================
+   BOTONES DE PLANTAS
+   ============================== */
 
 .lista-plantas {
-    width: 100%;
-
     display: flex;
-
     flex-direction: column;
 
-    gap: 14px;
+    gap: 15px;
+
+    width: 100%;
 }
 
 .planta-boton {
     width: 100%;
 
-    display: grid;
+    border: none;
 
-    grid-template-columns: 70px 1fr 50px;
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 15px;
+
+    padding: 18px 22px;
+
+    display: grid;
+    grid-template-columns: 50px 1fr 40px;
 
     align-items: center;
 
     text-align: left;
 
-    padding: 20px 25px;
-
-    background-color: #B8CCB2;
-
-    border: none;
-
-    border-radius: 18px;
-
-    color: #49634D;
-
-    font-family: Georgia, serif;
-
     cursor: pointer;
 
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+
+    transition: 0.2s;
 }
 
 .planta-boton:hover {
-    transform: translateX(8px);
+    transform: translateY(-2px);
 
-    box-shadow: 0 8px 20px rgba(73, 99, 77, 0.15);
+    background: white;
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.09);
 }
 
-.planta-numero {
-    font-size: 15px;
 
+/* ==============================
+   NOMBRES DE LAS PLANTAS
+   ============================== */
+
+.numero {
+    font-size: 15px;
     opacity: 0.7;
 }
 
-.planta-nombre {
+.nombre-planta {
     font-size: 21px;
+    color: #415c47;
 }
 
-.planta-flecha {
+.flecha {
     font-size: 28px;
-
+    color: #6f9274;
     text-align: right;
 }
 
 
-/* =========================
-   BOTÓN PLANTAS DE ABI
-   ========================= */
+/* ==============================
+   BOTONES INFERIORES
+   ============================== */
 
 .botones-secciones {
-    margin-top: 35px;
+    display: flex;
+    justify-content: center;
 
-    margin-bottom: 5px;
+    margin-top: 30px;
 }
-
-
-/* =========================
-   BOTÓN VOLVER DE PLANTAS
-   ========================= */
 
 .volver-plantas {
-    margin-top: 35px;
+    display: block;
 
-    margin-bottom: 0;
+    margin: 35px auto 0;
+
+    flex-shrink: 0;
 }
 
 
-/* =========================
+/* ==============================
    DETALLE DE CADA PLANTA
-   ========================= */
+   ============================== */
 
 .planta-detalle {
-    background-color: #FAFAF7;
+    background: #f4f5e9;
 
-    padding: 35px;
-
-    flex-direction: column;
+    align-items: flex-start;
 
     justify-content: center;
-    align-items: center;
+
+    overflow-y: auto;
+
+    padding: 40px 20px 60px;
 }
 
 .detalle-planta {
-    width: 95%;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 900px;
 
-    height: 90vh;
-
-    display: grid;
-
-    grid-template-columns: 45% 55%;
-
-    background-color: #FFFFFF;
-
-    border-radius: 25px;
-
-    overflow: hidden;
-
-    box-shadow: 0 15px 40px rgba(73, 99, 77, 0.12);
+    margin: 0 auto;
 }
 
 
-/* =========================
-   ESPACIO PARA FOTOS
-   ========================= */
+/* ==============================
+   ENCABEZADO DE PLANTA
+   ============================== */
 
-.foto-planta {
-    position: relative;
-
-    background-color: #AFC9D8;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    overflow: hidden;
-}
-
-.foto-planta img {
-    width: 80%;
-    height: 75%;
-
-    object-fit: contain;
-
-    border-radius: 20px;
-}
-
-.foto-placeholder {
-    width: 80%;
-    height: 75%;
-
-    border: 2px dashed rgba(73, 99, 77, 0.35);
-
-    border-radius: 20px;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
+.detalle-planta h1 {
     text-align: center;
 
+    color: #496b4d;
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+}
+
+.nombre-cientifico {
+    text-align: center;
+
+    color: #718071;
+
     font-size: 18px;
+
+    margin-bottom: 30px;
 }
 
 
-/* =========================
-   FLECHAS DE FOTOS
-   ========================= */
+/* ==============================
+   TARJETA DE FOTOS
+   ============================== */
+
+.galeria-planta {
+    width: 100%;
+
+    margin: 0 auto 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.foto-contenedor {
+    width: 100%;
+    max-width: 600px;
+    height: 380px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background: white;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-contenedor img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
 
 .flecha-foto {
-    position: absolute;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
     width: 45px;
     height: 45px;
 
@@ -424,320 +431,120 @@ body {
 
     border-radius: 50%;
 
-    background-color: rgba(250, 250, 247, 0.85);
+    background: #6f9274;
 
-    color: #49634D;
+    color: white;
 
-    font-size: 35px;
+    font-size: 25px;
 
     cursor: pointer;
 
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    transition: transform 0.3s, background-color 0.3s;
+    flex-shrink: 0;
 }
 
 .flecha-foto:hover {
-    transform: translateY(-50%) scale(1.1);
-}
-
-.flecha-foto.izquierda {
-    left: 20px;
-}
-
-.flecha-foto.derecha {
-    right: 20px;
+    background: #58795d;
 }
 
 
-/* =========================
+/* ==============================
    INFORMACIÓN DE LA PLANTA
-   ========================= */
+   ============================== */
 
 .informacion-planta {
-    padding: 45px;
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    line-height: 1.7;
+
+    color: #536354;
+
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.06);
+
+    max-height: 450px;
 
     overflow-y: auto;
-
-    text-align: left;
-}
-
-.numero-planta {
-    font-size: 14px;
-
-    letter-spacing: 3px;
-
-    opacity: 0.6;
 }
 
 .informacion-planta h2 {
-    font-size: 38px;
+    color: #496b4d;
 
-    font-weight: normal;
+    font-size: 24px;
 
-    margin: 10px 0;
+    margin-top: 20px;
+
+    margin-bottom: 7px;
 }
 
-.informacion-planta .linea {
-    margin: 20px 0;
+.informacion-planta h2:first-child {
+    margin-top: 0;
 }
 
 .informacion-planta p {
     font-size: 17px;
 
-    line-height: 1.6;
-
-    margin: 15px 0;
-}
-
-.informacion-planta .boton {
-    margin-top: 20px;
+    margin-bottom: 12px;
 }
 
 
-/* =========================
+/* ==============================
    GALERÍA
-   ========================= */
+   ============================== */
 
-.galeria {
-    width: 100%;
-    height: 100vh;
-
-    background-color: #AFC9D8;
-
-    padding: 50px 30px;
-
-    text-align: center;
+#galeria {
+    background: #eef3e7;
 
     flex-direction: column;
 
-    justify-content: center;
-    align-items: center;
+    padding: 40px 20px;
+
+    overflow-y: auto;
 }
 
-.galeria h2 {
-    font-size: 38px;
+#galeria h1 {
+    color: #496b4d;
 
-    font-weight: normal;
-
-    margin-bottom: 15px;
-}
-
-.galeria p {
-    font-size: 19px;
-
-    line-height: 1.6;
+    margin-bottom: 25px;
 }
 
 
-/* =========================
-   ESPECIAL
-   ========================= */
+/* ==============================
+   SECCIÓN ESPECIAL
+   ============================== */
 
-.especial {
-    width: 100%;
-    height: 100vh;
-
-    background-color: #E8D99B;
-
-    padding: 50px 30px;
+#especial {
+    background: #f4f1dc;
 
     text-align: center;
 
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
+    padding: 40px 20px;
 }
 
-.especial h2 {
-    font-size: 38px;
-
-    font-weight: normal;
+#especial .tarjeta {
+    max-width: 750px;
 }
 
 
-/* =========================
-   PIE DE PÁGINA
-   ========================= */
-
-footer {
-    display: none;
-}
-
-
-/* =========================
-   PANTALLA DE CARGA
-   ========================= */
-
-.pantalla-carga {
-    position: fixed;
-
-    top: 0;
-    left: 0;
-
-    width: 100vw;
-    height: 100vh;
-
-    background-color: #FAFAF7;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    z-index: 9999;
-
-    animation: desaparecer 1s ease 3s forwards;
-
-    pointer-events: none;
-}
-
-.carga-contenido {
-    width: 100%;
-    max-width: 400px;
-
-    text-align: center;
-
-    animation: aparecer 1.2s ease;
-}
-
-.carga-hoja {
-    font-size: 55px;
-
-    display: block;
-
-    animation: respirar 2s infinite ease-in-out;
-}
-
-.carga-contenido h2 {
-    font-size: 42px;
-
-    font-weight: normal;
-
-    color: #49634D;
-
-    margin: 15px 0 5px;
-}
-
-.carga-contenido p {
-    color: #6d7e70;
-
-    font-size: 16px;
-
-    margin: 0;
-}
-
-
-/* =========================
-   BARRA DE CARGA
-   ========================= */
-
-.barra {
-    width: 220px;
-    height: 4px;
-
-    background-color: #AFC9D8;
-
-    border-radius: 10px;
-
-    margin: 25px auto;
-}
-
-.progreso {
-    height: 100%;
-    width: 0%;
-
-    background-color: #B8CCB2;
-
-    border-radius: 10px;
-
-    animation: cargar 3s ease forwards;
-}
-
-
-/* =========================
-   ANIMACIONES
-   ========================= */
-
-@keyframes cargar {
-
-    from {
-        width: 0%;
-    }
-
-    to {
-        width: 100%;
-    }
-
-}
-
-@keyframes respirar {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.15);
-    }
-
-}
-
-@keyframes aparecer {
-
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-@keyframes desaparecer {
-
-    0% {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-
-}
-
-
-/* ==================================================
-   ADAPTACIÓN PARA TELÉFONOS
-   ================================================== */
+/* ==========================================================
+   TELÉFONOS
+   ========================================================== */
 
 @media (max-width: 600px) {
 
-    html,
     body {
-        width: 100%;
-        min-width: 0;
+        overflow: hidden;
     }
 
 
-    /* =========================
+    /* ==============================
        PORTADA
-       ========================= */
+       ============================== */
 
     .portada {
-        padding: 25px 20px;
+        padding: 25px 15px;
     }
 
     .portada h1 {
@@ -746,348 +553,309 @@ footer {
 
     .portada p {
         font-size: 17px;
-
-        margin: 12px 0 28px;
-    }
-
-    .boton {
-        font-size: 16px;
-
-        padding: 13px 22px;
+        margin-bottom: 28px;
     }
 
 
-    /* =========================
+    /* ==============================
        DEDICATORIA
-       ========================= */
+       ============================== */
 
     .dedicatoria {
-        padding: 20px 15px;
+        padding: 25px 15px;
+
+        overflow-y: auto;
     }
 
     .tarjeta {
         width: 100%;
 
-        padding: 35px 22px;
+        padding: 30px 22px;
 
         border-radius: 20px;
     }
 
-    .flor {
-        font-size: 32px;
-    }
-
-    .tarjeta h2 {
+    .tarjeta h1 {
         font-size: 36px;
     }
 
     .tarjeta p {
         font-size: 16px;
-
-        line-height: 1.7;
+        line-height: 1.6;
     }
 
-    .botones-navegacion {
-        flex-wrap: wrap;
+    .tarjeta .boton {
+        display: block;
 
-        gap: 10px;
-
-        margin-top: 25px;
+        margin: 15px auto 0;
     }
 
 
-    /* =========================
-       PLANTAS
-       ========================= */
-
-    .plantas {
-        padding: 30px 15px;
-
-        overflow-y: auto;
-
-        -webkit-overflow-scrolling: touch;
-
-        justify-content: flex-start;
-    }
+    /* ==================================================
+       LISTAS DE PLANTAS EN TELÉFONO
+       ================================================== */
 
     .plantas:not(.planta-detalle) {
-        overflow-y: auto;
+        display: block !important;
 
-        justify-content: flex-start;
-
-        padding-bottom: 50px;
-    }
-
-    .plantas-contenido {
         width: 100%;
 
-        flex-shrink: 0;
+        height: 100vh !important;
+        min-height: 100vh !important;
+        max-height: none !important;
 
-        padding-bottom: 20px;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+
+        box-sizing: border-box;
+
+        padding: 30px 15px 80px !important;
+
+        -webkit-overflow-scrolling: touch;
     }
 
-    .plantas h2 {
+    .plantas:not(.planta-detalle) .plantas-contenido {
+        display: block;
+
+        width: 100%;
+
+        max-width: 850px;
+
+        height: auto;
+
+        min-height: 0;
+
+        margin: 0 auto;
+
+        padding-bottom: 10px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ==============================
+       TÍTULO
+       ============================== */
+
+    .plantas h1 {
         font-size: 32px;
+
+        margin-bottom: 10px;
     }
 
     .intro-plantas {
         font-size: 16px;
 
+        line-height: 1.5;
+
         margin-bottom: 25px;
     }
 
 
-    /* =========================
+    /* ==============================
        BOTONES DE PLANTAS
-       ========================= */
+       ============================== */
 
-    .planta-boton {
-        grid-template-columns: 45px 1fr 35px;
-
-        padding: 17px 15px;
-
-        border-radius: 15px;
+    .lista-plantas {
+        gap: 12px;
     }
 
-    .planta-numero {
+    .planta-boton {
+        padding: 16px 15px;
+
+        grid-template-columns: 35px 1fr 30px;
+
+        border-radius: 13px;
+    }
+
+    .numero {
         font-size: 13px;
     }
 
-    .planta-nombre {
+    .nombre-planta {
         font-size: 17px;
+
+        line-height: 1.3;
     }
 
-    .planta-flecha {
-        font-size: 24px;
+    .flecha {
+        font-size: 23px;
     }
 
-    .planta-boton:hover {
-        transform: none;
-    }
+
+    /* ==============================
+       VER MÁS
+       ============================== */
 
     .botones-secciones {
-        margin-top: 30px;
-
-        margin-bottom: 5px;
+        margin-top: 25px;
     }
 
-    .volver-plantas {
-        margin-top: 30px;
+    .botones-secciones .boton {
+        font-size: 15px;
 
-        margin-bottom: 40px;
+        padding: 12px 20px;
 
-        flex-shrink: 0;
+        max-width: 100%;
     }
 
 
-    /* =========================
-       DETALLE DE PLANTA
-       ========================= */
+    /* ==============================
+       VOLVER
+       ============================== */
+
+    .plantas:not(.planta-detalle) .volver-plantas {
+        display: block !important;
+
+        position: static !important;
+
+        width: fit-content;
+
+        margin: 40px auto 20px !important;
+
+        flex-shrink: 0 !important;
+    }
+
+
+    /* ==================================================
+       DETALLE DE PLANTAS
+       ================================================== */
 
     .planta-detalle {
+        display: none;
+
+        width: 100%;
+
         height: 100vh;
 
-        padding: 15px;
+        min-height: 100vh;
 
-        justify-content: flex-start;
+        overflow-y: auto;
 
-        overflow: hidden;
+        overflow-x: hidden;
+
+        padding: 25px 15px 50px;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .planta-detalle.activa {
+        display: flex;
     }
 
     .detalle-planta {
         width: 100%;
 
-        height: calc(100vh - 30px);
+        max-width: 900px;
 
-        display: flex;
+        margin: 0 auto;
+    }
 
-        flex-direction: column;
+    .detalle-planta h1 {
+        font-size: 30px;
 
-        border-radius: 18px;
+        line-height: 1.2;
 
-        overflow: hidden;
+        margin-bottom: 8px;
+    }
+
+    .nombre-cientifico {
+        font-size: 16px;
+
+        margin-bottom: 20px;
     }
 
 
-    /* =========================
-       FOTO EN TELÉFONO
-       ========================= */
+    /* ==============================
+       FOTOS
+       ============================== */
 
-    .foto-planta {
-        width: 100%;
+    .galeria-planta {
+        gap: 8px;
 
-        height: 38%;
-
-        min-height: 220px;
-
-        flex-shrink: 0;
+        margin-bottom: 22px;
     }
 
-    .foto-planta img {
-        width: 85%;
-        height: 82%;
-
-        object-fit: contain;
+    .foto-contenedor {
+        height: 250px;
 
         border-radius: 15px;
     }
 
     .flecha-foto {
-        width: 40px;
-        height: 40px;
+        width: 38px;
+        height: 38px;
 
-        font-size: 30px;
-    }
-
-    .flecha-foto.izquierda {
-        left: 10px;
-    }
-
-    .flecha-foto.derecha {
-        right: 10px;
+        font-size: 20px;
     }
 
 
-    /* =========================
-       INFORMACIÓN EN TELÉFONO
-       ========================= */
+    /* ==============================
+       INFORMACIÓN
+       ============================== */
 
     .informacion-planta {
-        padding: 25px 20px;
+        padding: 20px;
 
-        overflow-y: auto;
+        max-height: none;
 
-        flex: 1;
-    }
+        overflow: visible;
 
-    .numero-planta {
-        font-size: 12px;
-
-        letter-spacing: 2px;
+        border-radius: 16px;
     }
 
     .informacion-planta h2 {
-        font-size: 29px;
+        font-size: 20px;
 
-        line-height: 1.2;
-
-        margin: 8px 0;
-    }
-
-    .informacion-planta .linea {
-        margin: 15px 0;
+        margin-top: 18px;
     }
 
     .informacion-planta p {
         font-size: 15px;
 
         line-height: 1.6;
-
-        margin: 13px 0;
-    }
-
-    .informacion-planta .boton {
-        margin-top: 15px;
-
-        margin-bottom: 10px;
     }
 
 
-    /* =========================
-       GALERÍA
-       ========================= */
+    /* ==============================
+       BOTÓN VOLVER EN DETALLE
+       ============================== */
 
-    .galeria {
-        padding: 30px 20px;
-    }
+    .planta-detalle .volver-plantas {
+        display: block;
 
-    .galeria h2 {
-        font-size: 32px;
-    }
+        margin: 30px auto 0;
 
-    .galeria p {
-        font-size: 16px;
+        flex-shrink: 0;
     }
 
 
-    /* =========================
-       ESPECIAL
-       ========================= */
+    /* ==============================
+       BOTONES GENERALES
+       ============================== */
 
-    .especial {
-        padding: 30px 20px;
+    .boton {
+        font-size: 15px;
+
+        padding: 12px 23px;
     }
 
-    .especial h2 {
-        font-size: 32px;
-    }
 
-
-    /* =========================
+    /* ==============================
        CARGA
-       ========================= */
+       ============================== */
 
-    .carga-contenido {
-        padding: 0 20px;
-    }
-
-    .carga-hoja {
+    .carga-icono {
         font-size: 48px;
     }
 
     .carga-contenido h2 {
-        font-size: 36px;
+        font-size: 27px;
     }
 
     .carga-contenido p {
         font-size: 14px;
-    }
-
-    .barra {
-        width: 180px;
-    }
-
-}
-
-
-/* ==================================================
-   TELÉFONOS MUY PEQUEÑOS
-   ================================================== */
-
-@media (max-width: 380px) {
-
-    .portada h1 {
-        font-size: 42px;
-    }
-
-    .portada p {
-        font-size: 16px;
-    }
-
-    .tarjeta h2 {
-        font-size: 32px;
-    }
-
-    .plantas h2 {
-        font-size: 29px;
-    }
-
-    .planta-nombre {
-        font-size: 16px;
-    }
-
-    .foto-planta {
-        height: 34%;
-
-        min-height: 190px;
-    }
-
-    .informacion-planta {
-        padding: 20px 17px;
-    }
-
-    .informacion-planta h2 {
-        font-size: 26px;
+        padding: 0 20px;
     }
 
 }
