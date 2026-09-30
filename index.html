@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -13,170 +12,390 @@
 
 <body>
 
-    <!-- PANTALLA DE CARGA -->
-    <div class="pantalla-carga">
 
-        <div class="carga-contenido">
+   <!-- =========================================
+     PANTALLA DE CARGA
+========================================== -->
 
-            <div class="carga-hoja">🌿</div>
+<div class="pantalla-carga">
 
-            <h2>AbiPlant</h2>
+    <div class="carga-contenido">
 
-            <p>Preparando tu pequeño jardín...</p>
-
-            <div class="barra">
-                <div class="progreso"></div>
-            </div>
-
+        <div class="carga-icono">
+            🌿
         </div>
+
+        <h2>AbiPlant</h2>
+
+        <p>
+            Un pequeño espacio dedicado a las plantas.
+        </p>
 
     </div>
 
+</div>
 
-    <!-- PORTADA -->
-    <section class="pantalla portada activa" id="portada">
 
-        <h1>AbiPlant</h1>
 
-        <p>Un pequeño espacio dedicado a las plantas.</p>
+    <!-- =========================================
+         PORTADA
+    ========================================== -->
 
-        <button class="boton" onclick="mostrarPantalla('dedicatoria')">
-            Entrar
-        </button>
+    <section id="portada" class="pantalla portada activa">
+
+        <div class="portada-contenido">
+
+            <h1>AbiPlant</h1>
+
+            <p>
+                Un pequeño espacio dedicado a las plantas.
+            </p>
+
+            <button class="boton"
+                onclick="mostrarPantalla('dedicatoria')">
+                Entrar
+            </button>
+
+        </div>
 
     </section>
 
 
-    <!-- DEDICATORIA -->
-    <section class="pantalla dedicatoria" id="dedicatoria">
+
+    <!-- =========================================
+         DEDICATORIA
+    ========================================== -->
+
+    <section id="dedicatoria" class="pantalla dedicatoria">
 
         <div class="tarjeta">
 
-            <div class="flor">🌿</div>
-
-            <h2>Para Abi</h2>
-
-            <div class="linea"></div>
+            <h1>Para Abi</h1>
 
             <p>
                 Hice este pequeño espacio pensando en ti.
             </p>
 
             <p>
-                Así como una planta necesita tiempo, cuidado y cariño
-                para crecer, hay personas que hacen que nuestros días
-                también florezcan.
+                Así como una planta necesita tiempo, cuidado y cariño para crecer,
+                hay personas que hacen que nuestros días también florezcan.
             </p>
 
             <p>
                 Esta página es un pequeño detalle para ti.
             </p>
 
-            <div class="botones-navegacion">
+            <button class="boton"
+                onclick="mostrarPantalla('plantas-abi')">
+                Ver plantas
+            </button>
 
-                <button class="boton" onclick="mostrarPantalla('portada')">
-                    Volver
-                </button>
-
-                <button class="boton" onclick="mostrarPantalla('plantas')">
-                    Continuar
-                </button>
-
-            </div>
+            <button class="boton secundario"
+                onclick="mostrarPantalla('portada')">
+                Volver
+            </button>
 
         </div>
 
     </section>
 
 
-    <!-- PLANTAS -->
-    <section class="pantalla plantas" id="plantas">
+
+    <!-- =========================================
+         3 PLANTAS FAVORITAS DE ABI
+    ========================================== -->
+
+    <section id="plantas-abi" class="pantalla plantas">
 
         <div class="plantas-contenido">
 
-            <h2>Nuestras plantas</h2>
+            <h1>🌿 Plantas de Abi</h1>
 
             <p class="intro-plantas">
                 Estas son 3 de las plantas favoritas de Abi.
-                Cada una es diferente, pero todas tienen algo especial
-                que las hace únicas.
             </p>
 
 
             <div class="lista-plantas">
 
-                <button class="planta-boton" onclick="mostrarPantalla('peperomia')">
 
-                    <span class="planta-numero">01</span>
+                <!-- =================================
+                     PEperomia
+                ================================== -->
 
-                    <span class="planta-nombre">
+                <button class="planta-boton"
+                    onclick="mostrarPantalla('peperomia')">
+
+                    <span class="numero">🌿</span>
+
+                    <span class="nombre-planta">
                         Peperomia cadena de tortuga
                     </span>
 
-                    <span class="planta-flecha">→</span>
+                    <span class="flecha">→</span>
 
                 </button>
 
 
-                <button class="planta-boton" onclick="mostrarPantalla('hibisco')">
 
-                    <span class="planta-numero">02</span>
+                <!-- =================================
+                     HIBISCOS
+                ================================== -->
 
-                    <span class="planta-nombre">
+                <button class="planta-boton"
+                    onclick="mostrarPantalla('hibisco')">
+
+                    <span class="numero">🌺</span>
+
+                    <span class="nombre-planta">
                         Hibiscos
                     </span>
 
-                    <span class="planta-flecha">→</span>
+                    <span class="flecha">→</span>
 
                 </button>
 
 
-                <button class="planta-boton" onclick="mostrarPantalla('oxalis')">
 
-                    <span class="planta-numero">03</span>
+                <!-- =================================
+                     OXALIS
+                ================================== -->
 
-                    <span class="planta-nombre">
+                <button class="planta-boton"
+                    onclick="mostrarPantalla('oxalis')">
+
+                    <span class="numero">🍀</span>
+
+                    <span class="nombre-planta">
                         Oxalis
                     </span>
 
-                    <span class="planta-flecha">→</span>
+                    <span class="flecha">→</span>
 
                 </button>
 
             </div>
 
 
-            <div class="volver-plantas">
+            <div class="botones-secciones">
 
-                <button class="boton" onclick="mostrarPantalla('dedicatoria')">
-                    ← Volver a la dedicatoria
+                <button class="boton"
+                    onclick="mostrarPantalla('otras-plantas')">
+                    Ver más plantas
                 </button>
 
             </div>
+
+
+            <button class="boton volver-plantas"
+                onclick="mostrarPantalla('dedicatoria')">
+                Volver
+            </button>
 
         </div>
 
     </section>
 
 
-    <!-- PEPEROMIA -->
-    <section class="pantalla plantas planta-detalle" id="peperomia">
+
+    <!-- =========================================
+         TODAS LAS NUEVAS PLANTAS
+    ========================================== -->
+
+    <section id="otras-plantas" class="pantalla plantas">
+
+        <div class="plantas-contenido">
+
+            <h1>🌱 Más plantas</h1>
+
+            <p class="intro-plantas">
+                Otras plantas que también forman parte de este pequeño espacio.
+            </p>
+
+
+            <div class="lista-plantas">
+
+
+                <!-- TORENIA -->
+
+                <button class="planta-boton"
+                    onclick="mostrarPantalla('torenia')">
+
+                    <span class="numero">04</span>
+
+                    <span class="nombre-planta">
+                        Torenia
+                    </span>
+
+                    <span class="flecha">→</span>
+
+                </button>
+
+
+
+                <!-- LOBELIA -->
+
+                <button class="planta-boton"
+                    onclick="mostrarPantalla('lobelia')">
+
+                    <span class="numero">05</span>
+
+                    <span class="nombre-planta">
+                        Lobelia — Mosquito
+                    </span>
+
+                    <span class="flecha">→</span>
+
+                </button>
+
+
+
+                <!-- TOM THUMB -->
+
+                <button class="planta-boton"
+                    onclick="mostrarPantalla('tomThumb')">
+
+                    <span class="numero">06</span>
+
+                    <span class="nombre-planta">
+                        Crassula 'Tom Thumb'
+                    </span>
+
+                    <span class="flecha">→</span>
+
+                </button>
+
+
+
+                <!-- CRASSULA PUBESCENS -->
+
+                <button class="planta-boton"
+                    onclick="mostrarPantalla('crassulaPubescens')">
+
+                    <span class="numero">07</span>
+
+                    <span class="nombre-planta">
+                        Crassula pubescens
+                    </span>
+
+                    <span class="flecha">→</span>
+
+                </button>
+
+
+
+                <!-- PIEDRA LUNAR -->
+
+                <button class="planta-boton"
+                    onclick="mostrarPantalla('piedraLunar')">
+
+                    <span class="numero">08</span>
+
+                    <span class="nombre-planta">
+                        Suculenta piedra lunar
+                    </span>
+
+                    <span class="flecha">→</span>
+
+                </button>
+
+
+
+                <!-- PETUNIA -->
+
+                <button class="planta-boton"
+                    onclick="mostrarPantalla('petunia')">
+
+                    <span class="numero">09</span>
+
+                    <span class="nombre-planta">
+                        Petunia
+                    </span>
+
+                    <span class="flecha">→</span>
+
+                </button>
+
+
+
+                <!-- SEDUM -->
+
+                <button class="planta-boton"
+                    onclick="mostrarPantalla('sedum')">
+
+                    <span class="numero">10</span>
+
+                    <span class="nombre-planta">
+                        Sedum hernandezii
+                    </span>
+
+                    <span class="flecha">→</span>
+
+                </button>
+
+
+
+                <!-- BEGONIA -->
+
+                <button class="planta-boton"
+                    onclick="mostrarPantalla('begonia')">
+
+                    <span class="numero">11</span>
+
+                    <span class="nombre-planta">
+                        Begonia Grupo Rex
+                    </span>
+
+                    <span class="flecha">→</span>
+
+                </button>
+
+            </div>
+
+
+            <div class="botones-secciones">
+
+                <button class="boton"
+                    onclick="mostrarPantalla('plantas-abi')">
+                    Plantas favoritas de Abi
+                </button>
+
+            </div>
+
+
+            <button class="boton volver-plantas"
+                onclick="mostrarPantalla('dedicatoria')">
+                Volver
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PEPEROMIA
+    ========================================== -->
+
+    <section id="peperomia"
+        class="pantalla plantas planta-detalle">
 
         <div class="detalle-planta">
 
             <div class="foto-planta">
 
-                <img id="foto-peperomia"
-                     src="imagenes/peperomia/foto1.jpg"
-                     alt="Peperomia cadena de tortuga">
-
                 <button class="flecha-foto izquierda"
-                        onclick="cambiarFoto('peperomia', -1)">
+                    onclick="cambiarFoto('peperomia', -1)">
                     ‹
                 </button>
 
+                <img id="foto-peperomia"
+                    src="imagenes/peperomia/foto1.jpg"
+                    alt="Peperomia cadena de tortuga">
+
                 <button class="flecha-foto derecha"
-                        onclick="cambiarFoto('peperomia', 1)">
+                    onclick="cambiarFoto('peperomia', 1)">
                     ›
                 </button>
 
@@ -185,15 +404,11 @@
 
             <div class="informacion-planta">
 
-                <span class="numero-planta">01</span>
-
-                <h2>Peperomia cadena de tortuga</h2>
-
-                <div class="linea"></div>
+                <h1>Peperomia cadena de tortuga</h1>
 
                 <p>
                     <strong>Nombre científico:</strong>
-                    Peperomia prostrata
+                    <em>Peperomia prostrata</em>
                 </p>
 
                 <p>
@@ -203,84 +418,102 @@
 
                 <p>
                     <strong>Origen:</strong>
-                    Regiones tropicales de América del Sur.
+                    Tropical, principalmente Brasil y zonas cercanas de Sudamérica.
                 </p>
 
                 <p>
-                    La Peperomia cadena de tortuga es una planta pequeña y
-                    rastrera conocida por sus hojas redondeadas, carnosas y
-                    decoradas con patrones que recuerdan al caparazón de una
-                    tortuga.
+                    <strong>Descripción:</strong>
+                    Planta pequeña de crecimiento rastrero y lento, apreciada por
+                    sus hojas redondeadas y carnosas que presentan un patrón
+                    parecido al caparazón de una tortuga.
                 </p>
 
                 <p>
                     <strong>Luz:</strong>
-                    Prefiere luz brillante indirecta.
+                    Luz brillante e indirecta.
                 </p>
 
                 <p>
                     <strong>Riego:</strong>
-                    Necesita poco riego. Es recomendable dejar que el
-                    sustrato se seque parcialmente antes de volver a regar.
+                    Moderado. Conviene dejar que el sustrato se seque parcialmente
+                    antes de volver a regar y evitar el exceso de humedad para
+                    prevenir problemas en raíces y tallos.
                 </p>
 
                 <p>
                     <strong>Humedad:</strong>
-                    Disfruta de ambientes con humedad moderada.
+                    Moderada.
                 </p>
 
                 <p>
                     <strong>Temperatura:</strong>
-                    Prefiere temperaturas cálidas y no tolera bien el frío
-                    intenso.
+                    Prefiere temperaturas cálidas y estables. Debe protegerse del
+                    frío intenso y las heladas.
                 </p>
 
                 <p>
                     <strong>Sustrato:</strong>
-                    Debe tener buen drenaje para evitar que las raíces
-                    permanezcan demasiado tiempo húmedas.
+                    Ligero, aireado y con buen drenaje.
+                </p>
+
+                <p>
+                    <strong>Fertilización:</strong>
+                    Puede recibir fertilización ligera durante su etapa de crecimiento.
                 </p>
 
                 <p>
                     <strong>Propagación:</strong>
-                    Puede reproducirse mediante esquejes de tallo u hojas.
+                    Puede propagarse mediante esquejes de tallo o de hoja.
                 </p>
 
                 <p>
-                    <strong>Dato interesante:</strong>
-                    Sus hojas recuerdan a pequeños caparazones de tortuga,
-                    de ahí uno de sus nombres comunes.
+                    <strong>Floración:</strong>
+                    Produce pequeñas inflorescencias, aunque sus hojas son
+                    principalmente el atractivo ornamental.
                 </p>
 
-                <button class="boton" onclick="mostrarPantalla('plantas')">
-                    ← Volver a las plantas
-                </button>
+                <p>
+                    <strong>Curiosidad:</strong>
+                    El patrón de sus hojas recuerda a pequeñas cadenas de
+                    caparazones de tortuga, razón por la que recibe su nombre común.
+                </p>
 
             </div>
 
         </div>
 
+
+        <button class="boton volver-plantas"
+            onclick="mostrarPantalla('plantas-abi')">
+            Volver
+        </button>
+
     </section>
 
 
-    <!-- HIBISCO -->
-    <section class="pantalla plantas planta-detalle" id="hibisco">
+
+    <!-- =========================================
+         HIBISCO
+    ========================================== -->
+
+    <section id="hibisco"
+        class="pantalla plantas planta-detalle">
 
         <div class="detalle-planta">
 
             <div class="foto-planta">
 
-                <img id="foto-hibisco"
-                     src="imagenes/hibisco/foto4.jpg"
-                     alt="Hibisco">
-
                 <button class="flecha-foto izquierda"
-                        onclick="cambiarFoto('hibisco', -1)">
+                    onclick="cambiarFoto('hibisco', -1)">
                     ‹
                 </button>
 
+                <img id="foto-hibisco"
+                    src="imagenes/hibisco/foto4.jpg"
+                    alt="Hibiscos">
+
                 <button class="flecha-foto derecha"
-                        onclick="cambiarFoto('hibisco', 1)">
+                    onclick="cambiarFoto('hibisco', 1)">
                     ›
                 </button>
 
@@ -289,15 +522,11 @@
 
             <div class="informacion-planta">
 
-                <span class="numero-planta">02</span>
-
-                <h2>Hibiscos</h2>
-
-                <div class="linea"></div>
+                <h1>Hibiscos</h1>
 
                 <p>
-                    <strong>Nombre científico de referencia:</strong>
-                    Hibiscus rosa-sinensis
+                    <strong>Nombre científico:</strong>
+                    <em>Hibiscus rosa-sinensis</em>
                 </p>
 
                 <p>
@@ -307,94 +536,109 @@
 
                 <p>
                     <strong>Origen:</strong>
-                    Regiones tropicales y subtropicales de Asia.
+                    Asia tropical y subtropical.
                 </p>
 
                 <p>
-                    El hibisco es un arbusto conocido por sus flores grandes,
-                    llamativas y de colores variados. Es una planta muy
-                    apreciada tanto por sus flores como por su follaje.
+                    <strong>Descripción:</strong>
+                    Arbusto de hojas verdes y brillantes que produce flores
+                    grandes y llamativas. Existen numerosas variedades con
+                    diferentes colores y formas de flor.
                 </p>
 
                 <p>
                     <strong>Luz:</strong>
-                    Necesita bastante luz y puede recibir varias horas de sol.
+                    Necesita buena iluminación y puede recibir varias horas de sol.
+                    En climas muy cálidos conviene protegerlo del sol intenso del
+                    mediodía.
                 </p>
 
                 <p>
                     <strong>Riego:</strong>
-                    Requiere riego regular, especialmente durante las épocas
-                    cálidas. El exceso de agua debe evitarse.
+                    Regular. El sustrato debe mantenerse ligeramente húmedo,
+                    evitando los encharcamientos.
                 </p>
 
                 <p>
                     <strong>Humedad:</strong>
-                    Prefiere ambientes con humedad moderada a alta.
+                    Moderada a alta.
                 </p>
 
                 <p>
                     <strong>Temperatura:</strong>
-                    Se desarrolla mejor en temperaturas cálidas.
+                    Prefiere temperaturas cálidas y debe protegerse de las heladas
+                    y del frío intenso.
                 </p>
 
                 <p>
-                    <strong>Suelo:</strong>
-                    Necesita un sustrato fértil, aireado y con buen drenaje.
+                    <strong>Sustrato:</strong>
+                    Fértil, ligero y con buen drenaje.
                 </p>
 
                 <p>
-                    <strong>Floración:</strong>
-                    Con suficiente luz, agua y nutrientes puede producir
-                    flores de manera abundante durante las temporadas
-                    favorables.
-                </p>
-
-                <p>
-                    <strong>Poda:</strong>
-                    Una poda adecuada puede ayudar a mantener la forma de la
-                    planta y estimular nuevos brotes.
+                    <strong>Fertilización:</strong>
+                    Puede recibir fertilización periódica durante su crecimiento
+                    y floración.
                 </p>
 
                 <p>
                     <strong>Propagación:</strong>
-                    Puede propagarse principalmente mediante esquejes.
+                    Puede propagarse mediante esquejes o semillas.
                 </p>
 
                 <p>
-                    <strong>Dato interesante:</strong>
-                    Sus flores pueden presentar una gran variedad de colores
-                    y formas dependiendo de la variedad.
+                    <strong>Floración:</strong>
+                    Produce flores grandes y muy vistosas.
                 </p>
 
-                <button class="boton" onclick="mostrarPantalla('plantas')">
-                    ← Volver a las plantas
-                </button>
+                <p>
+                    <strong>Poda:</strong>
+                    La poda puede ayudar a mantener una forma compacta y favorecer
+                    la aparición de nuevos brotes.
+                </p>
+
+                <p>
+                    <strong>Curiosidad:</strong>
+                    Sus flores pueden encontrarse en colores como rojo, rosa,
+                    amarillo, naranja y blanco, dependiendo de la variedad.
+                </p>
 
             </div>
 
         </div>
 
+
+        <button class="boton volver-plantas"
+            onclick="mostrarPantalla('plantas-abi')">
+            Volver
+        </button>
+
     </section>
 
 
-    <!-- OXALIS -->
-    <section class="pantalla plantas planta-detalle" id="oxalis">
+
+    <!-- =========================================
+         OXALIS
+    ========================================== -->
+
+    <section id="oxalis"
+        class="pantalla plantas planta-detalle">
 
         <div class="detalle-planta">
 
             <div class="foto-planta">
 
-                <img id="foto-oxalis"
-                     src="imagenes/oxalis/foto7.jpg"
-                     alt="Oxalis">
-
                 <button class="flecha-foto izquierda"
-                        onclick="cambiarFoto('oxalis', -1)">
+                    onclick="cambiarFoto('oxalis', -1)">
                     ‹
                 </button>
 
+                <img id="foto-oxalis"
+                    src="imagenes/oxalis/foto7.jpg"
+                    alt="Oxalis">
+
                 <button class="flecha-foto derecha"
-                        onclick="cambiarFoto('oxalis', 1)">
+                    onclick="cambiarFoto('oxalis', 1)">
                     ›
                 </button>
 
@@ -403,15 +647,11 @@
 
             <div class="informacion-planta">
 
-                <span class="numero-planta">03</span>
-
-                <h2>Oxalis</h2>
-
-                <div class="linea"></div>
+                <h1>Oxalis</h1>
 
                 <p>
-                    <strong>Nombre científico de referencia:</strong>
-                    Oxalis triangularis
+                    <strong>Nombre científico:</strong>
+                    <em>Oxalis triangularis</em>
                 </p>
 
                 <p>
@@ -421,109 +661,685 @@
 
                 <p>
                     <strong>Origen:</strong>
-                    Regiones de América del Sur.
+                    Sudamérica, principalmente zonas de clima templado y húmedo.
                 </p>
 
                 <p>
-                    La Oxalis triangularis es una planta reconocida por sus
-                    características hojas triangulares, que suelen presentar
-                    tonalidades moradas o púrpuras.
+                    <strong>Descripción:</strong>
+                    Planta ornamental pequeña cuyas hojas tienen forma triangular
+                    y pueden presentar tonos verdes, morados o violetas.
                 </p>
 
                 <p>
                     <strong>Luz:</strong>
-                    Prefiere luz brillante indirecta.
+                    Luz brillante e indirecta.
                 </p>
 
                 <p>
                     <strong>Riego:</strong>
-                    El sustrato debe mantenerse ligeramente húmedo,
-                    evitando que permanezca completamente empapado.
+                    Moderado. Es recomendable dejar que el sustrato se seque
+                    ligeramente entre riegos.
                 </p>
 
                 <p>
                     <strong>Humedad:</strong>
-                    Prefiere una humedad moderada.
+                    Moderada y con buena ventilación.
                 </p>
 
                 <p>
                     <strong>Temperatura:</strong>
-                    Se desarrolla mejor en temperaturas suaves y cálidas.
+                    Prefiere temperaturas moderadas y debe protegerse de las
+                    heladas y del frío extremo.
                 </p>
 
                 <p>
-                    <strong>Suelo:</strong>
-                    Necesita un sustrato ligero y con buen drenaje.
+                    <strong>Sustrato:</strong>
+                    Ligero, fértil y con buen drenaje.
+                </p>
+
+                <p>
+                    <strong>Fertilización:</strong>
+                    Puede recibir fertilización ligera durante su etapa de crecimiento.
                 </p>
 
                 <p>
                     <strong>Propagación:</strong>
-                    Puede reproducirse principalmente mediante sus pequeños
-                    bulbos o estructuras subterráneas.
+                    Puede propagarse mediante sus bulbos y estructuras subterráneas.
+                </p>
+
+                <p>
+                    <strong>Floración:</strong>
+                    Produce pequeñas flores de colores claros.
                 </p>
 
                 <p>
                     <strong>Periodo de reposo:</strong>
-                    En determinadas condiciones puede entrar en un periodo
-                    de dormancia, durante el cual pierde parte de sus hojas
-                    y reduce su crecimiento.
+                    En determinados periodos puede perder sus hojas y entrar en
+                    reposo, para posteriormente volver a crecer.
                 </p>
 
                 <p>
-                    <strong>Dato interesante:</strong>
-                    Sus hojas pueden abrirse durante el día y cerrarse cuando
-                    llega la noche, creando un movimiento natural muy
-                    característico.
+                    <strong>Curiosidad:</strong>
+                    Sus hojas pueden abrirse durante el día y cerrarse durante
+                    la noche o cuando existe poca iluminación.
                 </p>
 
-                <button class="boton" onclick="mostrarPantalla('plantas')">
-                    ← Volver a las plantas
+            </div>
+
+        </div>
+
+
+        <button class="boton volver-plantas"
+            onclick="mostrarPantalla('plantas-abi')">
+            Volver
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================================
+         TORENIA
+    ========================================== -->
+
+    <section id="torenia"
+        class="pantalla plantas planta-detalle">
+
+        <div class="detalle-planta">
+
+            <div class="foto-planta">
+
+                <button class="flecha-foto izquierda"
+                    onclick="cambiarFoto('torenia', -1)">
+                    ‹
+                </button>
+
+                <img id="foto-torenia"
+                    src="imagenes/torenia/foto10.jpg"
+                    alt="Torenia">
+
+                <button class="flecha-foto derecha"
+                    onclick="cambiarFoto('torenia', 1)">
+                    ›
                 </button>
 
             </div>
+
+
+            <div class="informacion-planta">
+
+                <h1>Torenia</h1>
+
+                <p><strong>Nombre científico:</strong> <em>Torenia fournieri</em></p>
+
+                <p><strong>Familia:</strong> Linderniaceae</p>
+
+                <p><strong>Origen:</strong> India, China meridional e Indochina.</p>
+
+                <p><strong>Descripción:</strong> Planta herbácea de crecimiento bajo, apreciada principalmente por sus flores de colores llamativos, que pueden presentar tonos violetas, azules, rosados o blancos.</p>
+
+                <p><strong>Luz:</strong> Luz abundante, preferentemente indirecta o con sol suave. En climas muy calurosos conviene protegerla del sol intenso.</p>
+
+                <p><strong>Riego:</strong> Mantener el sustrato ligeramente húmedo, evitando que permanezca encharcado.</p>
+
+                <p><strong>Humedad:</strong> Prefiere humedad ambiental moderada.</p>
+
+                <p><strong>Temperatura:</strong> Se desarrolla mejor en temperaturas cálidas y puede resentirse con el frío intenso.</p>
+
+                <p><strong>Sustrato:</strong> Fértil, ligero y con buen drenaje.</p>
+
+                <p><strong>Propagación:</strong> Principalmente mediante semillas.</p>
+
+                <p><strong>Curiosidad:</strong> En inglés se conoce como <em>wishbone flower</em>, debido a la forma característica de sus estructuras florales.</p>
+
+            </div>
+
+        </div>
+
+        <button class="boton volver-plantas"
+            onclick="mostrarPantalla('otras-plantas')">
+            Volver
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================================
+         LOBELIA
+    ========================================== -->
+
+    <section id="lobelia"
+        class="pantalla plantas planta-detalle">
+
+        <div class="detalle-planta">
+
+            <div class="foto-planta">
+
+                <button class="flecha-foto izquierda"
+                    onclick="cambiarFoto('lobelia', -1)">
+                    ‹
+                </button>
+
+                <img id="foto-lobelia"
+                    src="imagenes/lobelia/foto13.jpg"
+                    alt="Lobelia">
+
+                <button class="flecha-foto derecha"
+                    onclick="cambiarFoto('lobelia', 1)">
+                    ›
+                </button>
+
+            </div>
+
+
+            <div class="informacion-planta">
+
+                <h1>Lobelia — Mosquito</h1>
+
+                <p><strong>Nombre científico:</strong> <em>Lobelia erinus</em></p>
+
+                <p><strong>Familia:</strong> Campanulaceae</p>
+
+                <p><strong>Origen:</strong> África tropical y meridional.</p>
+
+                <p><strong>Descripción:</strong> Planta pequeña y ramificada que produce numerosas flores, generalmente azules o violetas. Puede crecer de forma extendida y formar grupos bastante densos.</p>
+
+                <p><strong>Luz:</strong> Luz abundante, evitando el sol excesivamente fuerte en las horas de mayor calor.</p>
+
+                <p><strong>Riego:</strong> Mantener el sustrato ligeramente húmedo, sin permitir acumulaciones de agua.</p>
+
+                <p><strong>Humedad:</strong> Agradece una humedad moderada.</p>
+
+                <p><strong>Temperatura:</strong> Prefiere temperaturas suaves a cálidas.</p>
+
+                <p><strong>Sustrato:</strong> Ligero, fértil y con buen drenaje.</p>
+
+                <p><strong>Propagación:</strong> Principalmente por semillas.</p>
+
+                <p><strong>Curiosidad:</strong> <em>Lobelia erinus</em> puede comportarse como anual o como planta de vida más prolongada dependiendo de las condiciones de cultivo.</p>
+
+            </div>
+
+        </div>
+
+        <button class="boton volver-plantas"
+            onclick="mostrarPantalla('otras-plantas')">
+            Volver
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CRASSULA TOM THUMB
+    ========================================== -->
+
+    <section id="tomThumb"
+        class="pantalla plantas planta-detalle">
+
+        <div class="detalle-planta">
+
+            <div class="foto-planta">
+
+                <button class="flecha-foto izquierda"
+                    onclick="cambiarFoto('tomThumb', -1)">
+                    ‹
+                </button>
+
+                <img id="foto-tomThumb"
+                    src="imagenes/tom-thumb/foto16.jpg"
+                    alt="Crassula Tom Thumb">
+
+                <button class="flecha-foto derecha"
+                    onclick="cambiarFoto('tomThumb', 1)">
+                    ›
+                </button>
+
+            </div>
+
+
+            <div class="informacion-planta">
+
+                <h1>Crassula 'Tom Thumb'</h1>
+
+                <p><strong>Nombre científico:</strong> <em>Crassula</em> 'Tom Thumb'</p>
+
+                <p><strong>Familia:</strong> Crassulaceae</p>
+
+                <p><strong>Origen:</strong> Cultivar de origen hortícola.</p>
+
+                <p><strong>Descripción:</strong> Pequeña suculenta de crecimiento compacto, con hojas verdes que pueden desarrollar bordes y tonalidades rojizas o púrpuras cuando recibe condiciones adecuadas de luz. Produce pequeñas flores blancas con forma estrellada.</p>
+
+                <p><strong>Luz:</strong> Luz intensa. Puede recibir sol, aunque conviene protegerla del sol de la tarde extremadamente fuerte.</p>
+
+                <p><strong>Riego:</strong> Regar abundantemente y dejar que el sustrato se seque completamente antes de volver a regar.</p>
+
+                <p><strong>Humedad:</strong> Baja a moderada. No necesita humedad ambiental elevada.</p>
+
+                <p><strong>Temperatura:</strong> Prefiere temperaturas templadas y cálidas.</p>
+
+                <p><strong>Sustrato:</strong> Muy drenante, preferentemente una mezcla para cactus y suculentas.</p>
+
+                <p><strong>Propagación:</strong> Puede propagarse mediante hojas o hijuelos.</p>
+
+                <p><strong>Curiosidad:</strong> 'Tom Thumb' fue obtenido mediante el cruce de <em>Crassula rupestris</em> subsp. <em>marnieriana</em> con <em>Crassula rupestris</em> subsp. <em>rupestris</em>.</p>
+
+            </div>
+
+        </div>
+
+        <button class="boton volver-plantas"
+            onclick="mostrarPantalla('otras-plantas')">
+            Volver
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CRASSULA PUBESCENS
+    ========================================== -->
+
+    <section id="crassulaPubescens"
+        class="pantalla plantas planta-detalle">
+
+        <div class="detalle-planta">
+
+            <div class="foto-planta">
+
+                <button class="flecha-foto izquierda"
+                    onclick="cambiarFoto('crassulaPubescens', -1)">
+                    ‹
+                </button>
+
+                <img id="foto-crassulaPubescens"
+                    src="imagenes/crassula-pubescens/foto19.jpg"
+                    alt="Crassula pubescens">
+
+                <button class="flecha-foto derecha"
+                    onclick="cambiarFoto('crassulaPubescens', 1)">
+                    ›
+                </button>
+
+            </div>
+
+
+            <div class="informacion-planta">
+
+                <h1>Crassula pubescens</h1>
+
+                <p><strong>Nombre científico:</strong> <em>Crassula pubescens</em></p>
+
+                <p><strong>Familia:</strong> Crassulaceae</p>
+
+                <p><strong>Origen:</strong> Región del Cabo Sur, Sudáfrica.</p>
+
+                <p><strong>Descripción:</strong> Es una suculenta de crecimiento arbustivo pequeño, adaptada a ambientes secos. Sus tejidos carnosos le permiten almacenar agua.</p>
+
+                <p><strong>Luz:</strong> Luz abundante y varias horas de sol suave.</p>
+
+                <p><strong>Riego:</strong> Regar únicamente cuando el sustrato se encuentre completamente seco.</p>
+
+                <p><strong>Humedad:</strong> Baja. La humedad excesiva puede favorecer problemas en las raíces.</p>
+
+                <p><strong>Temperatura:</strong> Prefiere temperaturas templadas y cálidas, evitando el frío intenso.</p>
+
+                <p><strong>Sustrato:</strong> Muy drenante, con abundante material mineral.</p>
+
+                <p><strong>Propagación:</strong> Puede realizarse mediante esquejes u hojas, dependiendo de la forma de crecimiento.</p>
+
+                <p><strong>Curiosidad:</strong> Pertenece a la misma familia que muchas otras suculentas populares: Crassulaceae.</p>
+
+                <p><strong>Nota para AbiPlant:</strong> Cuando se confirme la subespecie completa, sustituimos esta ficha por la identificación exacta.</p>
+
+            </div>
+
+        </div>
+
+        <button class="boton volver-plantas"
+            onclick="mostrarPantalla('otras-plantas')">
+            Volver
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PIEDRA LUNAR
+    ========================================== -->
+
+    <section id="piedraLunar"
+        class="pantalla plantas planta-detalle">
+
+        <div class="detalle-planta">
+
+            <div class="foto-planta">
+
+                <button class="flecha-foto izquierda"
+                    onclick="cambiarFoto('piedraLunar', -1)">
+                    ‹
+                </button>
+
+                <img id="foto-piedraLunar"
+                    src="imagenes/piedra-lunar/foto22.jpg"
+                    alt="Suculenta piedra lunar">
+
+                <button class="flecha-foto derecha"
+                    onclick="cambiarFoto('piedraLunar', 1)">
+                    ›
+                </button>
+
+            </div>
+
+
+            <div class="informacion-planta">
+
+                <h1>Suculenta piedra lunar</h1>
+
+                <p><strong>Nombre científico:</strong> <em>Pachyphytum oviferum</em></p>
+
+                <p><strong>Familia:</strong> Crassulaceae</p>
+
+                <p><strong>Origen:</strong> México.</p>
+
+                <p><strong>Descripción:</strong> Suculenta de crecimiento lento que forma rosetas de hojas gruesas, redondeadas y cubiertas por una capa blanquecina llamada <strong>pruina</strong>, que le da su característico aspecto parecido a pequeñas piedras.</p>
+
+                <p><strong>Luz:</strong> Luz muy brillante y algunas horas de sol suave.</p>
+
+                <p><strong>Riego:</strong> Regar únicamente cuando el sustrato esté completamente seco. Tolera periodos de sequía.</p>
+
+                <p><strong>Humedad:</strong> Baja. No necesita pulverizaciones.</p>
+
+                <p><strong>Temperatura:</strong> Prefiere temperaturas templadas y debe protegerse de las heladas.</p>
+
+                <p><strong>Sustrato:</strong> Mezcla para cactus y suculentas con drenaje rápido.</p>
+
+                <p><strong>Propagación:</strong> Puede propagarse mediante semillas o esquejes de hoja.</p>
+
+                <p><strong>Curiosidad:</strong> La capa de pruina que cubre sus hojas ayuda a darle ese característico tono blanco azulado y puede dañarse fácilmente al tocarla.</p>
+
+            </div>
+
+        </div>
+
+        <button class="boton volver-plantas"
+            onclick="mostrarPantalla('otras-plantas')">
+            Volver
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PETUNIA
+    ========================================== -->
+
+    <section id="petunia"
+        class="pantalla plantas planta-detalle">
+
+        <div class="detalle-planta">
+
+            <div class="foto-planta">
+
+                <button class="flecha-foto izquierda"
+                    onclick="cambiarFoto('petunia', -1)">
+                    ‹
+                </button>
+
+                <img id="foto-petunia"
+                    src="imagenes/petunia/foto25.jpg"
+                    alt="Petunia">
+
+                <button class="flecha-foto derecha"
+                    onclick="cambiarFoto('petunia', 1)">
+                    ›
+                </button>
+
+            </div>
+
+
+            <div class="informacion-planta">
+
+                <h1>Petunia</h1>
+
+                <p><strong>Nombre científico:</strong> <em>Petunia</em> / <em>Petunia × hybrida</em></p>
+
+                <p><strong>Familia:</strong> Solanaceae</p>
+
+                <p><strong>Origen:</strong> El género <em>Petunia</em> es originario de Sudamérica.</p>
+
+                <p><strong>Descripción:</strong> Planta ornamental conocida por sus abundantes flores en una enorme variedad de colores. Existen numerosos híbridos y cultivares con diferentes formas y tamaños.</p>
+
+                <p><strong>Luz:</strong> Sol directo o luz muy abundante. Las petunias necesitan bastante luz para producir una buena floración.</p>
+
+                <p><strong>Riego:</strong> Mantener cierta humedad en el sustrato, evitando el exceso de agua.</p>
+
+                <p><strong>Humedad:</strong> Moderada.</p>
+
+                <p><strong>Temperatura:</strong> Prefiere temperaturas templadas y cálidas.</p>
+
+                <p><strong>Sustrato:</strong> Ligero, fértil y con buen drenaje.</p>
+
+                <p><strong>Floración:</strong> Puede florecer de manera prolongada durante la temporada cálida si recibe suficiente luz y cuidados adecuados.</p>
+
+                <p><strong>Propagación:</strong> Principalmente mediante semillas.</p>
+
+                <p><strong>Curiosidad:</strong> Existen cientos de cultivares de petunia, incluyendo variedades de flores grandes, pequeñas y formas colgantes.</p>
+
+            </div>
+
+        </div>
+
+        <button class="boton volver-plantas"
+            onclick="mostrarPantalla('otras-plantas')">
+            Volver
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SEDUM HERNANDEZII
+    ========================================== -->
+
+    <section id="sedum"
+        class="pantalla plantas planta-detalle">
+
+        <div class="detalle-planta">
+
+            <div class="foto-planta">
+
+                <button class="flecha-foto izquierda"
+                    onclick="cambiarFoto('sedum', -1)">
+                    ‹
+                </button>
+
+                <img id="foto-sedum"
+                    src="imagenes/sedum/foto28.jpg"
+                    alt="Sedum hernandezii">
+
+                <button class="flecha-foto derecha"
+                    onclick="cambiarFoto('sedum', 1)">
+                    ›
+                </button>
+
+            </div>
+
+
+            <div class="informacion-planta">
+
+                <h1>Sedum hernandezii</h1>
+
+                <p><strong>Nombre científico:</strong> <em>Sedum hernandezii</em></p>
+
+                <p><strong>Familia:</strong> Crassulaceae</p>
+
+                <p><strong>Origen:</strong> México, específicamente Puebla.</p>
+
+                <p><strong>Descripción:</strong> Pequeña suculenta de crecimiento compacto, formada por hojas carnosas que almacenan agua. Es una especie muy particular dentro del género <em>Sedum</em>.</p>
+
+                <p><strong>Luz:</strong> Luz intensa y algunas horas de sol directo suave.</p>
+
+                <p><strong>Riego:</strong> Regar únicamente cuando el sustrato esté completamente seco. El exceso de agua es uno de los principales riesgos para esta especie.</p>
+
+                <p><strong>Humedad:</strong> Baja.</p>
+
+                <p><strong>Temperatura:</strong> Prefiere temperaturas templadas y cálidas.</p>
+
+                <p><strong>Sustrato:</strong> Muy drenante, preferentemente una mezcla para suculentas.</p>
+
+                <p><strong>Propagación:</strong> Puede propagarse mediante hojas o esquejes.</p>
+
+                <p><strong>Curiosidad:</strong> Es una especie nativa de México y pertenece a la familia Crassulaceae, la misma familia de varias de las suculentas de esta sección.</p>
+
+            </div>
+
+        </div>
+
+        <button class="boton volver-plantas"
+            onclick="mostrarPantalla('otras-plantas')">
+            Volver
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================================
+         BEGONIA REX
+    ========================================== -->
+
+    <section id="begonia"
+        class="pantalla plantas planta-detalle">
+
+        <div class="detalle-planta">
+
+            <div class="foto-planta">
+
+                <button class="flecha-foto izquierda"
+                    onclick="cambiarFoto('begonia', -1)">
+                    ‹
+                </button>
+
+                <img id="foto-begonia"
+                    src="imagenes/begonia/foto31.jpg"
+                    alt="Begonia Grupo Rex">
+
+                <button class="flecha-foto derecha"
+                    onclick="cambiarFoto('begonia', 1)">
+                    ›
+                </button>
+
+            </div>
+
+
+            <div class="informacion-planta">
+
+                <h1>Begonia rizomatosa — Grupo Rex</h1>
+
+                <p><strong>Nombre científico:</strong> <em>Begonia</em> Rex Cultorum Group</p>
+
+                <p><strong>Familia:</strong> Begoniaceae</p>
+
+                <p><strong>Origen:</strong> Grupo de cultivares hortícolas derivados de begonias, con <em>Begonia rex</em> como uno de sus principales progenitores.</p>
+
+                <p><strong>Descripción:</strong> Son begonias cultivadas principalmente por sus hojas, que pueden presentar combinaciones espectaculares de verde, plateado, rosa, rojo, morado y otros tonos. El grupo incluye una enorme diversidad de formas y patrones.</p>
+
+                <p><strong>Luz:</strong> Luz brillante e indirecta. El sol directo intenso puede dañar las hojas.</p>
+
+                <p><strong>Riego:</strong> Mantener el sustrato ligeramente húmedo, pero nunca empapado. El rizoma es sensible al exceso de agua.</p>
+
+                <p><strong>Humedad:</strong> Humedad ambiental moderada a alta, especialmente en ejemplares de follaje muy elaborado.</p>
+
+                <p><strong>Temperatura:</strong> Prefiere temperaturas cálidas y estables.</p>
+
+                <p><strong>Sustrato:</strong> Ligero, aireado y con buen drenaje.</p>
+
+                <p><strong>Propagación:</strong> Puede propagarse mediante hojas, esquejes y, dependiendo del cultivar, división del rizoma.</p>
+
+                <p><strong>Curiosidad:</strong> El grupo Rex Cultorum reúne cientos de cultivares y destaca especialmente por la enorme variedad de colores y patrones de sus hojas.</p>
+
+            </div>
+
+        </div>
+
+        <button class="boton volver-plantas"
+            onclick="mostrarPantalla('otras-plantas')">
+            Volver
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================================
+         GALERÍA
+    ========================================== -->
+
+    <section id="galeria"
+        class="pantalla galeria">
+
+        <div class="tarjeta">
+
+            <h1>Galería</h1>
+
+            <p>
+                Un pequeño espacio para guardar algunos momentos y detalles.
+            </p>
+
+            <button class="boton"
+                onclick="mostrarPantalla('especial')">
+                Continuar
+            </button>
+
+            <button class="boton secundario"
+                onclick="mostrarPantalla('plantas-abi')">
+                Volver
+            </button>
 
         </div>
 
     </section>
 
 
-    <!-- GALERÍA -->
-    <section class="pantalla galeria" id="galeria">
 
-        <h2>Galería</h2>
+    <!-- =========================================
+         SECCIÓN ESPECIAL
+    ========================================== -->
 
-        <p>
-            Aquí podremos colocar fotografías más adelante.
-        </p>
+    <section id="especial"
+        class="pantalla especial">
 
-        <button class="boton" onclick="mostrarPantalla('plantas')">
-            ← Volver a las plantas
-        </button>
+        <div class="tarjeta">
 
-        <button class="boton" onclick="mostrarPantalla('especial')">
-            Continuar
-        </button>
+            <h1>Un pequeño detalle</h1>
 
-    </section>
+            <p>
+                Espero que este pequeño espacio te guste tanto como a mí
+                me gustó hacerlo.
+            </p>
 
+            <button class="boton"
+                onclick="mostrarPantalla('plantas-abi')">
+                Volver a las plantas
+            </button>
 
-    <!-- SECCIÓN ESPECIAL -->
-    <section class="pantalla especial" id="especial">
-
-        <h2>Un lugar especial</h2>
-
-        <p>
-            Esta sección la construiremos juntos.
-        </p>
-
-        <button class="boton" onclick="mostrarPantalla('galeria')">
-            ← Volver a la galería
-        </button>
+        </div>
 
     </section>
 
 
-    <!-- JAVASCRIPT -->
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
     <script src="script.js"></script>
 
 </body>

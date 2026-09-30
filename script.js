@@ -1,4 +1,3 @@
-
 // ==============================
 // PANTALLA DE CARGA
 // ==============================
@@ -34,8 +33,16 @@ function mostrarPantalla(id) {
     const pantallaSeleccionada = document.getElementById(id);
 
     if (pantallaSeleccionada) {
+
         pantallaSeleccionada.style.display = "flex";
         pantallaSeleccionada.classList.add("activa");
+
+        // Al entrar a una planta, comenzar desde arriba
+        const informacion = pantallaSeleccionada.querySelector(".informacion-planta");
+
+        if (informacion) {
+            informacion.scrollTop = 0;
+        }
     }
 
 }
@@ -63,6 +70,54 @@ const fotos = {
         "imagenes/oxalis/foto7.jpg",
         "imagenes/oxalis/foto8.jpg",
         "imagenes/oxalis/foto9.jpg"
+    ],
+
+    torenia: [
+        "imagenes/torenia/foto10.jpg",
+        "imagenes/torenia/foto11.jpg",
+        "imagenes/torenia/foto12.jpg"
+    ],
+
+    lobelia: [
+        "imagenes/lobelia/foto13.jpg",
+        "imagenes/lobelia/foto14.jpg",
+        "imagenes/lobelia/foto15.jpg"
+    ],
+
+    tomThumb: [
+        "imagenes/tom-thumb/foto16.jpg",
+        "imagenes/tom-thumb/foto17.jpg",
+        "imagenes/tom-thumb/foto18.jpg"
+    ],
+
+    crassulaPubescens: [
+        "imagenes/crassula-pubescens/foto19.jpg",
+        "imagenes/crassula-pubescens/foto20.jpg",
+        "imagenes/crassula-pubescens/foto21.jpg"
+    ],
+
+    piedraLunar: [
+        "imagenes/piedra-lunar/foto22.jpg",
+        "imagenes/piedra-lunar/foto23.jpg",
+        "imagenes/piedra-lunar/foto24.jpg"
+    ],
+
+    petunia: [
+        "imagenes/petunia/foto25.jpg",
+        "imagenes/petunia/foto26.jpg",
+        "imagenes/petunia/foto27.jpg"
+    ],
+
+    sedum: [
+        "imagenes/sedum/foto28.jpg",
+        "imagenes/sedum/foto29.jpg",
+        "imagenes/sedum/foto30.jpg"
+    ],
+
+    begonia: [
+        "imagenes/begonia/foto31.jpg",
+        "imagenes/begonia/foto32.jpg",
+        "imagenes/begonia/foto33.jpg"
     ]
 
 };
@@ -76,7 +131,16 @@ const fotoActual = {
 
     peperomia: 0,
     hibisco: 0,
-    oxalis: 0
+    oxalis: 0,
+
+    torenia: 0,
+    lobelia: 0,
+    tomThumb: 0,
+    crassulaPubescens: 0,
+    piedraLunar: 0,
+    petunia: 0,
+    sedum: 0,
+    begonia: 0
 
 };
 
